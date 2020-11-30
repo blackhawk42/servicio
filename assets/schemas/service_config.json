@@ -1,0 +1,56 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Service Configuration",
+	"description": "The values that must be present in the registering process",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string",
+			"description": "Nombre del servicio (imprimible)"
+		},
+		"uuid": {
+			"type": "string",
+			"description": "UUID única correspondiente a este servicio",
+			"format": "uuid"
+		},
+		"host": {
+			"type": "string",
+			"description": "Host del servicio, donde se le puede encontrar",
+			"format": "hostname"
+		},
+		"port": {
+			"type": "integer",
+			"description": "Puerto donde el servicio corre"
+		},
+		"routes": {
+			"type": "object",
+			"description": "Rutas de la API del servicio",
+			"properties": {
+				"processing": {
+					"type": "string",
+					"description": "Donde hacer POST para procesamiento de datos",
+					"format": "uri-reference"
+				},
+				"processing_schema": {
+					"type": "string",
+					"description": "Donde hacer GET para obtener el esquema en el que los datos deben estar para procesamiento",
+					"format": "uri-reference"
+				},
+				"activities": {
+					"type": "string",
+					"description": "Dónde hacer GET para obtener las actividades asociadas con este servicio",
+					"format": "uri-reference"
+				},
+				"activities_schema": {
+					"type": "string",
+					"description": "Donde hacer GET paar obtener el esquema en el que las actividades serán enviadas",
+					"format": "uri-reference"
+				},
+				"report": {
+					"type": "string",
+					"description": "Dónde se puede obtenerun reporte general."
+				}
+			}
+		}
+	}
+}

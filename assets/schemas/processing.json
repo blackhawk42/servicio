@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Procesamiento",
+	"description": "Esquema en el que datos a ser procesados deben ser POSTeados al servicio. Cada envío representa las respuestas de una aplicación del quiz, de un estudiante",
+	"type": "object",
+	"properties": {
+		"alumnoId": {
+			"description": "ID del usuario",
+			"type": "string"
+		},
+		"respuestas": {
+			"description": "Arreglo de respuestas",
+			"type": "array",
+			"items": {
+				"description": "Objeto representando una respuesta",
+				"type": "object",
+				"properties": {
+					"preguntaId": {
+						"description": "ID numérica de la pregunta",
+						"type": ["integer", "string"]
+					},
+					"respuesta": {
+						"description": "Respuesta dada por el usuario",
+						"type": ["string"]
+					}
+				}
+			}
+		}
+	}
+}

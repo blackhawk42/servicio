@@ -1,0 +1,42 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "Reporte",
+	"description": "Eschema del reporte general",
+	"type": "array",
+	"items": {
+		"description": "Un objeto representando a un estudiante con los valores presentados en \"Un modelo difuso para determinar el nivel cognitivo, usando la taxonomía de Bloom \"",
+		"type": "object",
+		"properties": {
+			"alumnoId": {
+				"type": "string"
+			},
+			"recordar": {
+				"type": "number"
+			},
+			"entender": {
+				"type": "number"
+			},
+			"aplicar": {
+				"type": "number"
+			},
+			"analizar": {
+				"type": "number"
+			},
+			"evaluar": {
+				"type": "number"
+			},
+			"crear": {
+				"type": "number"
+			},
+			"m": {
+				"type": "number"
+			},
+			"valor": {
+				"type": "number"
+			},
+			"variableLinguistica": {
+				"type": "string"
+			}
+		}
+	}
+}
